@@ -1,0 +1,75 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://www.technology1.com/saas-plus/security
+notes: >-
+  technologyonecorp.com (the record's Website) answered a plain browser GET with 403 bot-challenge in pre-flight,
+  but it redirects to www.technology1.com, which rendered fine via fetch-url.py. Legal links were read from the
+  rendered homepage footer (Privacy policy, Terms of use, Security & Trust). The Privacy Policy PDF
+  (/__data/assets/pdf_file/0011/116588/TechnologyOne-Privacy-Policy.pdf) returned HTTP 403 to curl and was not read,
+  so retention, GPC and individual-request channels in the full policy are unverified here.
+signals:
+  data_subject_request:
+    url: https://www.technology1.com/saas-plus/security
+    section: Privacy
+    evidence:
+    - source: https://www.technology1.com/saas-plus/security
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "Data Subject rights TechnologyOne offers a number of mechanisms by which the Data Controller can meet their GDPR obligations as it relates to data subject, such as ‘access, ‘rectification’, ‘erasure’, ‘portability’ etc."
+    note: >-
+      Processor-side posture: TechnologyOne provides tooling so the customer (Data Controller) can fulfil GDPR
+      access, rectification, erasure and portability requests. It does not state a channel or SLA for individuals.
+  subprocessors:
+    url: https://www.technology1.com/privacy-policy/technologyone-sub-processors
+    evidence:
+    - source: https://www.technology1.com/privacy-policy/technologyone-sub-processors
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "This page provides important information about the identity, role and location of each Sub-Processor. Prior to engaging any third-party Sub-Processor, TechnologyOne undertakes diligence to evaluate their privacy, security and confidentiality practices, and executes an agreement including the required obligations under privacy law."
+    note: >-
+      A published sub-processor list with entity, processing activity, personal-data categories and processing
+      location (infrastructure: AWS Australia Pty Ltd and Microsoft Azure; plus SaaS, group and corporate
+      sub-processors). No change-notification mechanism was found on the page.
+  data_residency:
+    url: https://www.technology1.com/privacy-policy/technologyone-sub-processors
+    section: Infrastructure Sub-Processors
+    evidence:
+    - source: https://www.technology1.com/privacy-policy/technologyone-sub-processors
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "Cloud hosting provider Customer Data including Personal Information, created by customer and stored in Applicable Technology1 Products, or shared with Technology1 during the provision of support Australia & United Kingdom"
+    - source: https://www.technology1.com/saas-plus/security
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "IRAP assessments are carried out by qualified professional assessors to provide a comprehensive and clear assessment of a system’s security controls and compliance with Australian Government requirements to store data classified at various levels."
+    note: >-
+      The AWS hosting row lists the processing location as Australia & United Kingdom (table cells flattened in the
+      quote). The security page states IRAP assessment up to PROTECTED. No customer-selectable region statement found.
+  incident_notification:
+    url: https://www.technology1.com/saas-plus/security
+    section: Security and privacy incident reporting
+    evidence:
+    - source: https://www.technology1.com/saas-plus/security
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "TechnologyOne has a robust Privacy and Security incident handling plan for the handling of issues related to Security or Privacy breaches and concerns. This handles all required notifications and communication with required regulatory bodies and has the customer (Data Controller) at the centre of process to ensure the fastest, most rigorous and least disruptive handling of reported incidents."
+    note: >-
+      An incident-handling plan covering regulator and customer notification is stated. No notification deadline
+      (e.g. hours) is published on this page.
+  ai_transparency:
+    url: https://www.technology1.com/saas-plus/security
+    section: ISO 42001:2023
+    evidence:
+    - source: https://www.technology1.com/saas-plus/security
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "TechnologyOne achieved ISO/IEC 42001:2023 certification in 2025, becoming one of the first enterprise software providers globally to be certified under this new international standard for Artificial Intelligence Management Systems (AIMS)."
+    - source: https://www.technology1.com/privacy-policy/technologyone-sub-processors
+      http_status: 200
+      fetched: '2026-10-22'
+      quote: "Amazon Web Services Australia Pty Ltd AWS Bedrock for AI model inference and orchestration of models AI-enabled functionality within the Technology1 product offerings"
+    note: >-
+      AI governance is disclosed through ISO/IEC 42001 certification and a linked AI governance policy PDF
+      (https://www.technology1.com/__data/assets/pdf_file/0011/295229/TechnologyOne_AI-Policy.pdf, not read), and the
+      sub-processor list names AWS Bedrock as the model-inference provider for AI features.

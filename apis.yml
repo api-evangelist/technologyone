@@ -1,23 +1,73 @@
 aid: technologyone
+
 name: TechnologyOne
-description: 'TechnologyOne is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: TechnologyOne (Technology One; UK entity TECHNOLOGY ONE UK LIMITED) is an enterprise software company that provides ERP delivered as SaaS. Its OnePublicSector product, listed on the UK government G-Cloud Digital Marketplace, is a fully integrated ERP SaaS solution for the public sector that builds in best-practice business processes. It covers financial management, including general ledger, accounts payable and receivable, budgeting and forecasting, and is available on any device. The company surfaced via the australia-apidays-2026 harvest. Its website (technologyonecorp.com) refuses automated clients with a 403 bot challenge.
+
 url: https://raw.githubusercontent.com/api-evangelist/technologyone/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- ERP
+- SaaS
+- Enterprise Software
+- Public Sector
+- Financial Management
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/technologyone-plans-pricing.yml
+- type: Lifecycle
+  url: lifecycle/technologyone-lifecycle.yml
+- type: Conformance
+  url: conformance/technologyone-conformance.yml
+- type: Hosts
+  url: hosts/technologyone-hosts.yml
+- type: Vendors
+  url: vendors/technologyone-vendors.yml
+- type: GitHubOrganization
+  url: https://github.com/technologyonecorp
+- type: DomainSecurity
+  url: security/technologyone-domain-security.yml
 - type: Website
   url: https://technologyonecorp.com/
+
+apis: []
+
+x-coverage:
+  state: blocked
+  reason: bot-challenge
+  detail: The front door technologyonecorp.com answered a browser User-Agent with HTTP 403 (preflight 2026-10-22), so no link-property pointers could be read from the site. The description comes from the UK G-Cloud listing. github.com/technologyone was not added because it links to technologyone.net, and nothing ties that domain to technologyonecorp.com.
+  evidence:
+  - url: https://technologyonecorp.com/
+    status: 403
+  - url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954
+    status: 200
+  - url: https://github.com/technologyone
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 13
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

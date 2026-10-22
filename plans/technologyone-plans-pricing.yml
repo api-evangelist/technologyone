@@ -1,0 +1,29 @@
+name: TechnologyOne pricing
+generated: '2026-10-22'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954
+audience: business-product
+pricing_basis: tiered-subscription
+published: true
+delivery:
+  delivery: managed
+note: TechnologyOne's own site (technologyonecorp.com) answers automated clients with 403, so prices come from its UK G-Cloud Digital Marketplace listings. Each listing prices the SaaS ERP product, not API usage. Both listings say "Free trial available No".
+plans:
+- name: OnePublicSector (G-Cloud)
+  description: Fully integrated ERP SaaS for the public sector, as listed on the UK G-Cloud Digital Marketplace.
+  price: 85000
+  price_text: "£85,000 a unit a year"
+  currency: GBP
+  billing_period: year
+  source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954
+  features: []
+  limits: []
+- name: OneCouncil (G-Cloud)
+  description: TechnologyOne OneCouncil SaaS, as listed on the UK G-Cloud Digital Marketplace.
+  price: 85000
+  price_text: "£85,000 a unit a year"
+  currency: GBP
+  billing_period: year
+  source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/886485371920512
+  features: []
+  limits: []

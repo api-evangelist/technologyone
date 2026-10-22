@@ -1,0 +1,10 @@
+generated: '2026-10-22'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954
+versioning: null
+deprecation: null
+status_page: null
+sla:
+  text: 'TechnologyOne provides the Customer with 99.5% availability of the software each month of the cloud services term during business hours. Business hours are deemed 7am-7pm Monday to Friday unless otherwise agreed.'
+  source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954
+note: No public API versioning or deprecation policy and no status page were found. The vendor site blocks automated clients (403), and the listing says only that API documentation exists, in format "Other".

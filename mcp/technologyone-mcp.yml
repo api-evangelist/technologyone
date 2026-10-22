@@ -1,0 +1,24 @@
+name: TechnologyOne MCP server
+type: MCPServer
+generated: '2026-10-22'
+method: none
+status: none
+description: >-
+  No official TechnologyOne MCP server (hosted or local) was found. Web searches for a
+  TechnologyOne MCP server returned only generic MCP material. The pre-flight probe of
+  https://technologyonecorp.com/mcp returned 403 with a 403 control, which is the site's
+  Cloudflare bot challenge (opaque, proves nothing either way). No OpenAPI contract is held
+  in this repo, so no candidate tool list could be derived.
+source:
+- https://technologyonecorp.com/mcp
+evidence:
+- url: https://technologyonecorp.com/mcp
+  status: 403
+  note: Cloudflare "Just a moment..." challenge; control path also 403 (opaque)
+- search: TechnologyOne MCP server Model Context Protocol
+  result: no TechnologyOne-specific results
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []

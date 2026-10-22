@@ -1,0 +1,31 @@
+generated: '2026-10-22'
+method: searched
+source: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954
+standards:
+- id: iso27001
+  conforms: claimed
+  evidence: 'G-Cloud listing (https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/360905346086954) lists "ISO/IEC 27001:2015 • ISO/IEC 27017 • ISO/IEC 27018 • ISAE 3402 SOC 1 • SSAE 18 SOC 1 • AT-C 205 SOC 2 • SOC 3 • Cyber Essentials and Cyber Essentials Plus"'
+- id: iso27017
+  conforms: claimed
+  evidence: same G-Cloud listing assurance list
+- id: iso27018
+  conforms: claimed
+  evidence: same G-Cloud listing assurance list
+- id: soc2
+  conforms: claimed
+  evidence: 'G-Cloud listing: "AT-C 205 SOC 2"'
+- id: soc1
+  conforms: claimed
+  evidence: 'G-Cloud listing: "ISAE 3402 SOC 1 • SSAE 18 SOC 1"'
+- id: cyber-essentials-plus
+  conforms: claimed
+  evidence: 'G-Cloud listing: "Cyber Essentials and Cyber Essentials Plus"'
+- id: wcag-2.1-aa
+  conforms: claimed
+  evidence: 'G-Cloud listing: "Accessibility standards WCAG 2.1 AA or EN 301 549"'
+- id: rest
+  conforms: claimed
+  evidence: 'G-Cloud listing: "A library of REST (REpresentational State Transfer) web services"'
+- id: soap
+  conforms: claimed
+  evidence: 'G-Cloud listing: "A library of SOAP (Simple Object Access Protocol) web services that implement specific business processes"'

@@ -1,0 +1,14 @@
+generated: '2026-10-22'
+method: none
+source: https://registry.npmjs.org/-/v1/search?text=technologyone
+packages: []
+checked:
+- url: https://registry.npmjs.org/-/v1/search?text=technologyone
+  status: 200
+  result: total 0
+- url: https://pypi.org/pypi/technologyone/json
+  status: 404
+- url: https://azuresearch-usnc.nuget.org/query?q=technologyone&take=5
+  status: 200
+  result: totalHits 0
+note: No first-party SDK or client library was found on npm, PyPI or NuGet.
